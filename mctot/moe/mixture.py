@@ -8,12 +8,12 @@ from mctot.moe.manager import Manager
 
 
 class MixtureOfExperts:
-    """Top-level MoE solver: Gate selects top-K experts, Manager aggregates."""
+    """Top-level mixture-of-experts Sudoku solver."""
 
     def __init__(self, experts: List[Expert], puzzle_size: int, k: int = 2) -> None:
         self.gate = Gate(experts, k=k)
         self.manager = Manager(puzzle_size)
 
     def solve(self, board: Board) -> Optional[Board]:
-        """Route ``board`` to top-K experts and return the aggregated answer."""
+        """Return a solution for ``board``."""
         raise NotImplementedError

@@ -26,7 +26,7 @@ class TotExpert(Expert):
             # in the offline base; a fully wired invocation is out of scope.
             raise RuntimeError("tot strategy not configured for offline use")
         except Exception:
-            return Proposal(solution=None, score=0.0, expert_name=self.name)
+            return Proposal(response=None, score=0.0, expert_name=self.name)
 
     def affinity(self, board):
         from mctot.core.board import blank_count, size

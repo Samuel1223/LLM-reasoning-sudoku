@@ -21,3 +21,6 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 include = ["mctot*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
